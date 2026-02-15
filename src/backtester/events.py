@@ -9,7 +9,6 @@ These events are the messages that get passed around the system
 """
 from dataclasses import dataclass
 from datetime import datetime
-from typing import optional
 
 @dataclass(frozen =True)
 class Bar:
@@ -18,7 +17,7 @@ class Bar:
     high: float
     low: float
     close: float
-    volume: float | None
+    volume: float | None = None
 
 @dataclass(frozen=True)
 class Order:
@@ -36,8 +35,6 @@ class Fill:
     quantity: float
     price: float
     fees: float
-
-
 
 
 
